@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kream</title>
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./css/css_reset.css" type="text/css">
+  <!-- 기본서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <!-- 공통서식 -->
+  <link rel="stylesheet" href="./css/common.css" type="text/css">
+  <!-- 메인서식 -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <!-- 폰트어썸CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <!-- script 영역 -->
+  <script src="./script/main.js" defer></script>
+  <!-- css3추가속성시 접두사 자동으로 붙여주는 스크립트 -->
+  <script src="./script/prefixfree.min.js"></script>
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- 제이쿼리 UI라이브러리 -->
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<input type="checkbox" id="hide_nav" class="hidden">
+<nav id="pc_nav">
+  <input type="checkbox" id="r_check" class="hidden">
+  <input type="checkbox" id="m_check" class="hidden">
+  <input type="checkbox" id="f_check" class="hidden">
+  <input type="checkbox" id="b_check" class="hidden">
+  <strong>Categories</strong>
+  <label for="hide_nav" class="nav_close">
+    <i class="fa-solid fa-xmark"></i>
+  </label>
+  <ul class="cate_wrap flex">
+    <li>
+      <label for="r_check">
+        추천
+      </label>
+      <ul class="cate_con rec_con">
+        <li>
+          <a href="#none" title="남성 추천">남성 추천</a>
+        </li>
+        <li>
+          <a href="#none" title="여성 추천">여성 추천</a>
+        </li>
+        <li>
+          <a href="#none" title="인기 브랜드">인기 브랜드</a>
+        </li>
+        <li>
+          <a href="#none" title="인기 럭셔리">인기 럭셔리</a>
+        </li>
+        <li>
+          <a href="#none" title="셀럽 픽">셀럽 픽</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label for="m_check">
+        남성
+      </label>
+      <ul class="cate_con mal_con">
+        <li>
+          <a href="#none" title="New">New</a>
+        </li>
+        <li>
+          <a href="#none" title="인기 신발">인기 신발</a>
+        </li>
+        <li>
+          <a href="#none" title="에센셜 아이템">에센셜 아이템</a>
+        </li>
+        <li>
+          <a href="#none" title="럭셔리">럭셔리</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label for="f_check">
+        여성
+      </label>
+      <ul class="cate_con fem_con">
+        <li>
+          <li>
+            <a href="#none" title="New">New</a>
+          </li>
+          <li>
+            <a href="#none" title="인기 신발">인기 신발</a>
+          </li>
+          <li>
+            <a href="#none" title="셀럽 픽">셀럽 픽</a>
+          </li>
+          <li>
+            <a href="#none" title="럭셔리">럭셔리</a>
+          </li>
+          <li>
+            <a href="#none" title="스몰 럭셔리">스몰 럭셔리</a>
+          </li>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <label for="b_check">
+        브랜드
+      </label>
+      <ul class="cate_con bra_con">
+        <li>
+          <a href="#none" title="모든 브랜드">모든 브랜드</a>
+        </li>
+        <li>
+          <a href="#none" title="스페셜 위크">스페셜 위크</a>
+        </li>
+        <li>
+          <a href="#none" title="포근한 봄날">포근한 봄날</a>
+        </li>
+        <li>
+          <a href="#none" title="기념일 선물">기념일 선물</a>
+        </li>
+        <li>
+          <a href="#none" title="테크 & 라이프">테크 & 라이프</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#none" title="기획전">
+        기획전
+      </a>
+    </li>
+    <li>
+      <a href="#none" title="기획전">
+        로그인
+      </a>
+    </li>
+    <li>
+      <a href="#none" title="기획전">
+        회원가입
+      </a>
+    </li>
+  </ul>
+</nav>
+<div id="body_wrap">
+  <body>
+    <!-- 헤더영역 -->
+    <header>
+      <div class="h_wrap">
+        <ul class="h_flex flex">
+          <li>
+            <a href="#none" title="최근 본 상품">recent viewed</a>
+          </li>
+          <li>
+            <a href="index.html" title="메인페이지 바로가기">
+              <h1 class="flex">
+                <img src="./images/logo.png" alt="메인로고">
+              </h1>
+            </a>
+          </li>
+          <li>
+            <a href="#none" title="장바구니">장바구니</a>
+          </li>
+          <li>
+            <label for="hide_nav">
+              <i class="fa-solid fa-list"></i>
+            </label>
+          </li>
+        </ul>
+        <div class="h_flex2 flex">
+          <input type="checkbox" id="h_select" class="hidden">
+          <ul class="h_flex2-1 flex">
+            <li>
+              <a href="#none" title="instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#none" title="facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#none" title="youtube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+          <label for="h_select" class="h_flex2-2">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <ul class="mini_nav">
+            <li>
+              <a href="#none" title="">뭔가 들어갈 자리</a>
+            </li>
+            <li>
+              <a href="#none" title="">뭔가 들어갈 자리</a>
+            </li>
+            <li>
+              <a href="#none" title="">뭔가 들어갈 자리</a>
+            </li>
+            <li>
+              <a href="#none" title="">뭔가 들어갈 자리</a>
+            </li>
+            <li>
+              <a href="#none" title="">뭔가 들어갈 자리</a>
+            </li>
+          </ul>
+          <ul class="h_s-con hidden">
+            <li>
+              <a href="#none" title="HOME">HOME</a>
+            </li>
+            <li>
+              <a href="#none" title="STYLE">STYLE</a>
+            </li>
+            <li>
+              <a href="#none" title="SHOP">SHOP</a>
+            </li>
+            <li>
+              <a href="#none" title="MY">MY</a>
+            </li>
+          </ul>
+          <span class="h_flex2-3 flex">
+            0000-0000
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+      <section id="main_slide">
+        <h2 class="hidden">메인 슬라이드 영역</h2>
+        <article id="slide_wrap">
+          <h3 class="hidden">&nbsp;</h3>
+          <div class="slider">
+            <ul class="img_slide flex">
+              <li>
+                <img src="./images/banner1.png" alt="배너1">
+              </li>
+              <li>
+                <img src="./images/banner2.png" alt="배너2">
+              </li>
+              <li>
+                <img src="./images/banner3.png" alt="배너3">
+              </li>
+            </ul>
+            <ul class="ctrl_btn">
+              <li>
+                <a href="#none" title="ctrl1" class="active">&nbsp;</a>
+              </li>
+              <li>
+                <a href="#none" title="ctrl2">&nbsp;</a>
+              </li>
+              <li>
+                <a href="#none" title="ctrl3">&nbsp;</a>
+              </li>
+            </ul>
+          </div>
+          <div class="b2_wrap">
+            <ul class="flex">
+              <li class="flex">
+                <strong>
+                  Silver All Day
+                </strong>
+                <span>
+                  반짝이는 매일, 빛나는 실버
+                </span>
+                <a href="#none" title="지금 구매하기">
+                  지금 구매하기 <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </li>
+              <li class="flex">
+                <strong>
+                  빛나는 콜라보 스니커즈
+                </strong>
+                <a href="#none" title="지금 거래하기">
+                  지금 거래하기
+                </a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article id="p_list">
+          <h3 class="hidden">상품리스트 영역</h3>
+          <strong>Most Popular</strong>
+          <ul class="pop_sort flex">
+            <li>
+              <a href="#none" title="Apple">Apple</a>
+            </li>
+            <li>
+              <a href="#none" title="New Balance">New Balance</a>
+            </li>
+            <li>
+              <a href="#none" title="Adidas">Adidas</a>
+            </li>
+            <li>
+              <a href="#none" title="Nike">Nike</a>
+            </li>
+            <li>
+              <a href="#none" title="Asics">Asics</a>
+            </li>
+          </ul>
+          <ul class="sort_con flex">
+            <li>
+              <img src="./images/item1.png" alt="item1">
+              <p>
+                <span class="brand">Apple</span> iPhone 14 Pro 128GB Silver (Korean Ver.)
+              </p>
+              <strong>1,318,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">iPhone 14 Pro 128GB Silver (Korean Ver.)</h4> <span class="price">1,318,000원</span> <img src="./images/item1.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+            <li>
+              <img src="./images/item2.png" alt="item2">
+              <p>
+                <span class="brand">Adidas</span> Gazelle Bold Pink Glow Victory Blue
+              </p>
+              <strong>429,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">Gazelle Bold Pink Glow Victory Blue</h4> <span class="price">429,000원</span> <img src="./images/item2.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+            <li>
+              <img src="./images/item3.png" alt="item3">
+              <p>
+                <span class="brand">New Balance</span> X Stone Island 574 Legacy Green
+              </p>
+              <strong>385,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">X Stone Island 574 Legacy Green</h4> <span class="price">385,000원</span> <img src="./images/item3.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+            <li>
+              <img src="./images/item4.png" alt="item4">
+              <p>
+                <span class="brand">Nike</span> Jordan 1 Retro High OG Chicago 2022
+              </p>
+              <strong>375,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">Jordan 1 Retro High OG Chicago 2022</h4> <span class="price">375,000원</span> <img src="./images/item4.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+            <li>
+              <img src="./images/item5.png" alt="item5">
+              <p>
+                <span class="brand">Asics</span> Gel-Kayano 14 White Midnight
+              </p>
+              <strong>238,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">Gel-Kayano 14 White Midnight</h4> <span class="price">238,000원</span> <img src="./images/item5.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+            <li>
+              <img src="./images/item6.png" alt="item6">
+              <p>
+                <span class="brand">Nike</span> X Sacai Blazer Low Magma Orange
+              </p>
+              <strong>100,000원</strong>
+              <a href="#none" title="add to cart">add to cart</a>
+
+              <div class="modal"> <div class="modal_ctnt"> <div class="plus_bg"><i class="fa-solid fa-plus plus_icon"></i></div> <i class="fa-regular fa-circle-xmark modal_exit"></i> <h4 class="modal_title">X Sacai Blazer Low Magma Orange</h4> <span class="price">100,000원</span> <img src="./images/item6.png" alt="상품 이미지" class="modal_img"><p class="modal_btn flex"><a href="#none" title="장바구니">장바구니</a><a href="#none" title="구매하기">구매하기</a></p> </div> </div>
+
+            </li>
+          </ul>
+        </article>
+        <article id="event">
+          <h3 class="hidden">이벤트 영역서식</h3>
+          <div class="e_modal">
+            <ul class="stu flex">
+              <li>
+                HIGHLIGHT
+              </li>
+              <li>
+                SaTurday of Us
+              </li>
+              <li>
+                <a href="#none" title="더보기">more</a>
+              </li>
+              <li>
+                STU 23SS | HIKING IN LOS ANGLELES
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article id="e_banner">
+          <ul class="flex">
+            <li>
+              <img src="./images/ebanner1.png" alt="e배너1">
+            </li>
+            <li>
+              <img src="./images/ebanner2.png" alt="e배너2">
+            </li>
+            <li>
+              <img src="./images/ebanner3.png" alt="e배너3">
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- 푸터영역 -->
+    <footer>
+      <div class="row">
+        <ul class="grid">
+          <li class="flex">
+            <div><img src="./images/logo.png" alt=""></div>
+            <div><address>Kream Copyright ©2023 All rights reserved.</address></div>
+          </li>
+          <li>
+            <ul class="flex">
+              <li><a href="#none" title="About">About</a></li>
+              <li><a href="#none" title="Blog">Blog</a></li>
+              <li><a href="#none" title="Faq">Faq</a></li>
+              <li><a href="#none" title="Returns">Returns</a></li>
+              <li><a href="#none" title="Contact">Contact</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="flex">
+              <li><a href="#none" title="My Account">My Account</a></li>
+              <li><a href="#none" title="Shipping">Shipping</a></li>
+              <li><a href="#none" title="Our Policies">Our Policies</a></li>
+              <li><a href="#none" title="Afiliates">Afiliates</a></li>
+            </ul>
+          </li>
+          <li class="flex">
+            <div>Subscribe to our newsletter</div>
+            <div class="subscribe">
+              <form action="./send.php" method="post">
+                <input type="text" name="email" id="email">
+                <input type="submit" class="btn_submit" value="SUBSCRIBE">
+              </form>
+            </div>
+          </li>
+        </ul>
+        <ul class="flex sns-area">
+          <li><a href="#none"><i class="fa-brands fa-pinterest"></i></a></li>
+          <li><a href="#none"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="#none"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#none"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+  
+  
+  </body>
+</div>
+</html>
